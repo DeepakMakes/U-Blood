@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - U-Blood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to U-Blood</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="userName">Loading...</a></li>
+        <li><a href="create-request.html">Create Blood Request</a></li>
+        <li><a href="view-requests.html">View Requests</a></li>
+        <li><a href="#" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Dashboard</h2>
+      <p>Welcome back, <span id="displayName">User</span>!</p>
+      <p>Total Blood Requests: <span id="requestCount">Loading...</span></p>
+    </section>
+
+    <section>
+      <h2>Register as a Donor</h2>
+      <form id="donorForm">
+        <label for="bloodGroup">Blood Group:</label>
+        <select id="bloodGroup" name="bloodGroup" required>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+
+        <label for="lastDonationDate">Last Donation Date (optional):</label>
+        <input type="date" id="lastDonationDate" name="lastDonationDate" />
+
+        <button type="submit">Register as Donor</button>
+      </form>
+    </section>
+    
+    
+    <section>
+        <h2>Find a Blood Bank/Donation Center</h2>
+        <form id="searchForm">
+          <label for="searchQuery">Search by Name or Location:</label>
+          <input type="text" id="searchQuery" name="searchQuery" placeholder="Enter location or name" required />
+          <button type="submit">Search</button>
+        </form>
+        <div id="searchResults"></div>
+    </section>
+      
+      
+  </main>
+  <script src="home.js"></script>
+</body>
+</html>         
